@@ -1,17 +1,44 @@
 .container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display:grid;
+  grid-template-rows: 34px auto auto;
 
-  background: url(../../../assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
+  header {
+    display:grid;
+    grid-template-rows: 75% auto;
+    padding: 8px;
+    background-color: #3a3a3a;
 
-  .title {
-    color: white;
-    margin:0;
-    padding:50px 20px;
+    strong{
+      -webkit-app-region: drag;
+      color: #fff;  
+      justify-self: left;    
+
+      span{
+        color:red;
+      }
+    }
+
+    nav{
+      justify-self: right;
+
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+
+        li{
+          float: left;
+          margin-left:8px;
+          margin-top:-12px;
+
+          img{
+            width:15px;
+            cursor:pointer;
+
+          }
+        }
+
+      }
+    }
   }
-
 }
